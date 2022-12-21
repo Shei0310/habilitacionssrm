@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+input{
+    border-radius: 2px;
+    border-color:aquamarine;
+    font-size: 25px;
+    background-color: antiquewhite;
+}
+</style>
+<body>
+    <div>Ingrese palabra: <input type="text" id="palabra" onblur="evaluar()"></div>
+
+    <script>
+        function evaluar() {
+            //console.log("hola");
+            var palabra = $("#palabra").val();
+            var palab = palabra.split();
+            console.log(palab);
+            if(palabra.length==0){
+                Swal.fire(
+                    'No hay texto',   
+                    ' ',                
+                    'error'
+                )
+            }else if(palabra.length==1){
+                Swal.fire(
+                    'No es posible evaluar un solo caracter',   
+                    ' ',                
+                    'error'
+                )  
+            }
+            else if (palabra == palab) {
+                Swal.fire(
+                    'Son iguales',   
+                    ' ',                
+                    'success'
+                )
+            }else{
+                Swal.fire(
+                    'Son diferentes',   
+                    ' ',                
+                    'error'
+                )
+            }
+
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>
