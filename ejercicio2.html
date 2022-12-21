@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: bisque;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    input {
+        border-radius: 2px;
+        border-color: aquamarine;
+        font-size: 25px;
+        background-color: antiquewhite;
+
+    }
+
+    button {
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    Ingrese texto: <input type="text" id="texto">
+    <button onclick="deletrear()">Deletrear</button>
+    <button onclick="actualizar()">Actualizar</button>
+
+    <label for="" id="mensaje"></label>
+    
+    <script>
+
+        var body = document.querySelector('body');
+        var mens = document.createElement('h3');
+        function deletrear() {
+            console.log("hola");
+            var texto = $("#texto").val();
+            var mensaje = $("#mensaje").val();
+            var impr = texto.split("");
+            console.log(impr);
+            // console.log(texto.length);
+            var mensaje = mensaje.html(texto.length);
+           for(){
+
+           }
+
+
+            body.appendChild(mens);
+        }
+
+        function actualizar() {
+            window.location.reload();
+        }
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
